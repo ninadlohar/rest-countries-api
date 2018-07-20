@@ -1,0 +1,31 @@
+<div class="page">
+  <div class="row header" style="text-align: center">
+    <div class="col-md-12">
+      <a style="color: white"> {{ header | uppercase }} {{ cn | uppercase }}</a>
+    </div>
+  </div>
+
+  <div class="container" style="text-align: center">
+    <div class="row" style="text-align: center">
+      <div *ngFor="let country of countries" class="col-lg-3 col-md-4 col-sm-6 col-12 card-border">
+        <div class="card text-center" style="width: 14rem">
+          <img class="card-img-top" src={{country.flag}} alt="country flag" />
+          <div class="card-body">
+            <h5 class="card-title">{{ country.name }}</h5>
+            <div>
+              Currency:
+              <span *ngFor="let currency of country.currencies; let i = last">
+                <a [routerLink]="['/region/' + country.region]" [queryParams]="{ 'currency' : currency.code}">{{currency.name}} </a>{{i ? "" : ","}} </span>
+            </div>
+            <div>
+              Language
+              <span *ngFor="let language of country.languages; let i = last">
+                <a [routerLink]="['/region/' + country.region]" [queryParams]="{ 'language' : language.iso639_1}">{{language.name}} </a>{{i ? "" : ","}} </span>
+            </div>
+            <button [routerLink]="['/country', country.name]" class="btn btn-primary btn-block">More Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

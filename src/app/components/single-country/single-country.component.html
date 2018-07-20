@@ -1,0 +1,66 @@
+<div *ngIf="countryInfo">
+  <div class="w-100 h-100 d-flex justify-content-center align-items-center cover">
+    <img src="{{ countryInfo[0].flag }}" class="w-60 h-60">
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-md-4" style="text-align: center; background-color: #efefef; padding: 0px! important">
+        <div>
+          <div class="blogs">
+            <span>
+              <b>Country Name:</b> {{ countryInfo[0].name}}</span>
+          </div>
+          <div class="blogs">
+            <span>
+              <b>Capital:</b> {{ countryInfo[0].capital}}</span>
+          </div>
+          <div class="blogs">
+            <span>
+              <b>Region:</b> {{ countryInfo[0].region}}</span>
+          </div>
+          <div class="blogs">
+            <span>
+              <b>Sub Region:</b> {{ countryInfo[0].subregion}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" style="text-align: center; background-color: #efefef; padding: 0px! important">
+        <div class="blogs">
+          <span>
+            <b>Population:</b> {{ countryInfo[0].population}}</span>
+        </div>
+        <div class="blogs">
+          <span>
+            <b>Demonym:</b> {{ countryInfo[0].demonym}}</span>
+        </div>
+        <div class="blogs">
+          <b>Currencies:</b>
+          <span *ngFor="let currency of countryInfo[0].currencies">
+            {{currency.name}}
+          </span>
+        </div>
+        <div class="blogs">
+          <b>Currency Symbol:</b>
+          <span *ngFor="let currency of countryInfo[0].currencies">
+            {{currency.symbol}}
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4" style="text-align: center; background-color: #efefef; padding: 0px! important">
+        <div class="blogs">
+          <b>Local Language:</b>
+          <span *ngFor="let lang of countryInfo[0].languages">
+            {{lang.name}}
+          </span>
+        </div>
+        <div class="blogs">
+          <b>Language also called as:</b>
+          <span *ngFor="let lang of countryInfo[0].languages">
+            {{lang.nativeName}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

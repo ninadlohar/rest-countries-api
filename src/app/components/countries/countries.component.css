@@ -1,0 +1,46 @@
+.card-title {
+  text-align: center;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 0px;
+  height: 100% !important;
+}
+
+.page {
+  display: absolute;
+  height: 100vh;
+  overflow: auto;
+  background-color: #e7e7e7;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.card-border {
+  margin: 20px 0;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-body {
+  padding: 15px !important;
+}
+
+.header {
+  background-color: #04192E;
+  display: block;
+  padding: 3%;
+  color: white;
+  font-size: 26px;
+  font-family: 'Roboto';
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.container {}

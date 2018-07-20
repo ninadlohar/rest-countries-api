@@ -1,0 +1,12 @@
+<div class="container-fluid">
+
+  <div *ngFor="let region of regions" style="text-align: center">
+    <div class="gapping">
+      <div class="blocks">
+        <h2>{{ region | uppercase }}</h2>
+        <a [routerLink]="['/region', region]" class="btn btn-primary">See Countries</a>
+      </div>
+    </div>
+  </div>
+
+</div>
